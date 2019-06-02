@@ -11,12 +11,12 @@ This application contains two parts, 'ttt_client' and 'ttt_server'.
 
   - index.js
   
-    - Under Class App
-       - Under the method render(), a basic wireframe has been defined. The main container is divided into two parts using the col-md-6 of bootstrap. The left side of the container contains a smaller div, in which you can enter the value for 'N' and then click the submit button to process the Top N most frequently occuring words. After processing the values would come on the right hand side in a tabular form.
+    - Under Component App
+       - Under the method render(), a basic wireframe has been defined. The main container is divided into two parts using the col-md-6 of bootstrap. The left side of the container contains a smaller div, in which you can enter the value for 'N' and then click the submit button to process the Top N most frequently occuring words. After processing, the values would come on the right hand side in a tabular form.
       - Under the event handleChange(), Everytime you enter a value for n in the textbox, the value is stored in the state as number.
-      - Under the event handleClick(), When the submit button is clicked, the value stored in the state for number is taken. Then a POST call occurs to the server with number as the body. Once the call is successful, it returns a response with the top n words. An object 'topNData' containing an empty array tableValues if defined. The words with their count is iteratted and pushed inside the array in the required format. This is again stored in the state as topNdata. topNdata is then passed to another class called TopNGrid.
-     - Under Class TopNGrid
-       - The value passed is recieved and again sent to another class called Demo which is present inside gridTopN.js.
+      - Under the event handleClick(), When the submit button is clicked, the value stored in the state for number is taken. Then a POST call occurs to the server with number as the body. Once the call is successful, it returns a response with the top n words. An object 'topNData' containing an empty array tableValues is defined. The words with their count is iterated and pushed inside the array in the required format. This is again stored in the state as topNdata. topNdata is then passed to another component called TopNGrid.
+     - Under Component TopNGrid
+       - The value passed is recieved and again sent to another component called Demo which is present inside gridTopN.js.
        
    - gridTopN.js
    
